@@ -1,0 +1,2 @@
+.\arktracker\Scripts\activate
+python3 populate_etf.py
