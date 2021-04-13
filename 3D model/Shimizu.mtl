@@ -1,0 +1,79 @@
+newmtl Cylinder material 2_eb3b8c8c-5c9b-452f-916b-f919eb99da76
+Kd 1.000 1.000 1.000
+d 1.000
+map_Kd colorTexture&opacityTexture.png
+newmtl Box material 5_cebec985-459c-48ea-a982-7e2266cfb816
+Kd 1.000 1.000 1.000
+d 1.000
+map_Kd colorTexture&opacityTexture_1.png
+newmtl Box material 1_19a8266f-526d-460e-994e-3398b8c1f601
+Kd 0.149 0.761 1.000
+d 1.000
+newmtl Torus material 2_00b354da-8f48-4fde-9fc9-7494a12b31be
+Kd 0.800 0.800 0.800
+d 1.000
+newmtl Torus material 1_206e21cd-9a7f-4a04-8d47-3f3a7e0698b5
+Kd 0.820 0.820 0.820
+d 1.000
+newmtl Box material 7_e182e082-edd0-46b2-89ba-28ab15a08e07
+Kd 0.800 0.800 0.800
+d 1.000
+newmtl Box material 6_8ef56554-d1fa-4f84-b9c1-32875fdeeb24
+Kd 0.800 0.800 0.800
+d 1.000
+newmtl Box material 4_2e365677-1b03-463a-8334-05e1911e0ea0
+Kd 1.000 1.000 1.000
+d 1.000
+map_Kd colorTexture&opacityTexture_2.png
+newmtl Box material 3_d7c8a83e-0242-44c2-b169-d11779d4efe7
+Kd 1.000 1.000 1.000
+d 1.000
+map_Kd colorTexture&opacityTexture_3.png
+newmtl Box material 2_9f3963c3-73c1-43c4-b6bb-3de369b8fe8f
+Kd 1.000 1.000 1.000
+d 1.000
+map_Kd colorTexture&opacityTexture_3.png
+newmtl Box material_fdb1b068-5ab7-4813-9cdb-186b992db97f
+Kd 0.800 0.800 0.800
+d 1.000
+newmtl Cylinder material 6_0ccdb710-7d95-41a7-bd25-94fc95a7c679
+Kd 0.388 0.839 0.494
+d 1.000
+newmtl Cylinder material 5_60ab44e8-b458-4f22-9a2e-2a7d5eb70db5
+Kd 0.420 0.761 0.490
+d 1.000
+newmtl Cylinder material 4_d9eae729-c328-4467-aa89-402354899d9b
+Kd 0.310 0.702 0.392
+d 1.000
+newmtl Cylinder material 3_a2be8810-89dd-4757-8614-7fabbe9ea088
+Kd 0.318 0.659 0.380
+d 1.000
+newmtl Cylinder material 1_dceab3e9-0fea-4f5a-a809-6090e1ff6a02
+Kd 1.000 1.000 1.000
+d 1.000
+map_Kd colorTexture&opacityTexture_4.png
+newmtl Capsule material_2d268c80-0397-4483-9d15-43dce9cff53b
+Kd 0.569 0.569 0.569
+d 1.000
+newmtl Tube material 1_01849eb1-a139-4d96-9fdf-6f65328070d0
+Kd 0.376 0.820 0.420
+d 1.000
+newmtl Cone material_f431cec8-0b3e-4825-b412-520e3b3c420b
+Kd 1.000 1.000 1.000
+d 1.000
+map_Kd colorTexture&opacityTexture_5.png
+newmtl Buffer Layer material_da092b6e-60ea-4217-bfb2-5ea4b7e2393e
+Kd 0.800 0.800 0.800
+d 1.000
+newmtl Cylinder material_e9748d6b-0a57-4864-8603-5ab60e5ff2db
+Kd 0.533 0.102 0.678
+d 1.000
+newmtl Torus material_fa53213f-449d-47d0-98ac-ff719b3e4c2f
+Kd 0.498 0.290 0.639
+d 1.000
+newmtl Tube material 2_3b10544e-23b7-4f1f-a276-7e13b6ab8f9b
+Kd 0.243 0.294 0.871
+d 1.000
+newmtl Object material_6a05ecd4-3c96-47c8-966b-77c0ce45629a
+Kd 1.000 1.000 1.000
+d 1.000
