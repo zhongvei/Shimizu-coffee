@@ -18,7 +18,7 @@ function App() {
           <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={Homescreen} 
-        options={{headerShown: false}}
+        options={{headerShown: true}}
         // options={{ headerTitle: props => <Navbar {...props} /> }}
         />
         <Stack.Screen name="Hand Drip" component={HandDrip} />

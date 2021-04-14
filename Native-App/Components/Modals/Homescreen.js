@@ -1,10 +1,11 @@
 import React from 'react';
 import {StyleSheet,View,Text, ImageBackground ,Image, Dimensions, Button,ScrollView} from 'react-native';
 import { TouchableHighlight } from 'react-native-gesture-handler';
+import {useState} from 'react';
 
 const win = Dimensions.get('window');
 
-const data = ["Hand Drip","Batch Brew","Cold Drip"]
+const data = ["Hand Drip","Batch Brew","Cold Brew"]
 
 const HomeScreen = ({navigation}) => {
     return(
@@ -16,99 +17,82 @@ const HomeScreen = ({navigation}) => {
             <View style={styles.container}>
                 <ScrollView horizontal={true}
                 snapToInterval={win.width}
-                showsHorizontalScrollIndicator={true}
                 centerContent={true}
-                bounces={false}
+                decelerationRate={0.1}
+                pagingEnabled={true}
+                scrollEventThrottle={10}
                 contentContainerStyle={{alignItems:"center"}}
                 >
-                    {data.map((method)=>{
-                        return(
-                            <TouchableHighlight style={styles.card}>
-                            <View>
-                                <Text>
-                                    {method}
-                                </Text>
-                            </View>
+                    
+                    <View style={styles.box}>
+                        <TouchableHighlight 
+                        style={styles.card}
+                        underlayColor={"none"}
+                        activeOpacity={1}
+                        onPress={()=>navigation.navigate('Hand Drip')}>
+                        <>
+                        <View style={styles.image_view}>
+                            <Image
+                                source={require('../../assets/images/HandDrip.jpg')}
+                                style={{height:"100%",width:"100%",borderRadius:50}}
+                            >
+
+                            </Image>
+                        </View>
+                        <View style={{padding:40}}>
+                            <Text style={{fontSize:30,color:"brown"}}>
+                                Hand Drip
+                            </Text>
+                        </View>
+                        </>
                         </TouchableHighlight>
-                        )
-                    })}
-                    {/* <TouchableHighlight 
-                    style={styles.first_box}
-                    onPress={()=> navigation.navigate('Hand Drip')}
-                    underlayColor="#AFEEEE"
-                    >
+                    </View>
+                    <View style={styles.box}>
+                        <TouchableHighlight 
+                        style={styles.card}
+                        underlayColor={"none"}
+                        activeOpacity={1}
+                        onPress={()=>navigation.navigate('Batch Brew')}>
                         <>
-                            <View
-                            style={styles.image_view}>
-                                <Image
-                                    style={{width:100,height:110}}
-                                    source={require('../../assets/icons/HandDrip.png')}>
-                                </Image>
-                            </View>
-                            <View
-                                style={styles.text_view}
+                        <View style={styles.image_view}>
+                            <Image
+                                source={require('../../assets/images/BatchBrew.jpg')}
+                                style={{height:"100%",width:"100%",borderRadius:50}}
                             >
-                                <Text
-                                    style={{fontSize:30}}
-                                >
-                                    Hand Drip
-                                </Text>
-                            </View>
-    
-                        </>
-                    </TouchableHighlight>   
 
-                    <TouchableHighlight 
-                    style={styles.box}
-                    onPress={()=> navigation.navigate('Batch Brew')}
-                    underlayColor="#AFEEEE"
-                    >
-                        <>
-                            <View
-                            style={styles.image_view}>
-                                <Image
-                                    style={{width:100,height:110}}
-                                    source={require('../../assets/icons/BatchBrew.jpg')}>
-                                </Image>
-                            </View>
-                            <View
-                                style={styles.text_view}
-                            >
-                                <Text
-                                    style={{fontSize:30}}
-                                >
-                                    Cold Brew
-                                </Text>
-                            </View>
-    
+                            </Image>
+                        </View>
+                        <View style={{padding:40}}>
+                            <Text style={{fontSize:30,color:"brown"}}>
+                                Batch Brew
+                            </Text>
+                        </View>
                         </>
-                    </TouchableHighlight>  
+                        </TouchableHighlight>
+                    </View>
+                    <View style={styles.box}>
+                        <TouchableHighlight 
+                        style={styles.card}
+                        underlayColor={"none"}
+                        activeOpacity={1}
+                        onPress={()=>navigation.navigate('Cold Brew')}>
+                        <>
+                        <View style={styles.image_view}>
+                            <Image
+                                source={require('../../assets/images/ColdBrew.jpg')}
+                                style={{height:"100%",width:"100%",borderRadius:50}}
+                            >
 
-                    <TouchableHighlight 
-                    style={styles.box}
-                    onPress={()=> navigation.navigate('Cold Brew')}
-                    underlayColor="#AFEEEE"
-                    >
-                        <>
-                            <View
-                            style={styles.image_view}>
-                                <Image
-                                    style={{width:100,height:120}}
-                                    source={require('../../assets/icons/ColdBrew.png')}>
-                                </Image>
-                            </View>
-                            <View
-                                style={styles.text_view}
-                            >
-                                <Text
-                                    style={{fontSize:30}}
-                                >
-                                    Batch Brew
-                                </Text>
-                            </View>
-    
+                            </Image>
+                        </View>
+                        <View style={{padding:40}}>
+                            <Text style={{fontSize:30,color:"brown"}}>
+                                Cold Brew
+                            </Text>
+                        </View>
                         </>
-                    </TouchableHighlight>  */}
+                        </TouchableHighlight>
+                    </View>
                 </ScrollView>
             </View>
         </ImageBackground>
@@ -118,7 +102,8 @@ const HomeScreen = ({navigation}) => {
 const styles = StyleSheet.create({
     background: {
         height:win.height,
-        width:win.width
+        width:win.width,
+        backgroundColor:"#add8e6"
     },
     container:{
         width: "100%",
@@ -127,45 +112,27 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     box: {
-        width:win.width*0.85,
-        height:win.height*0.13,
-        margin: 30,
-        padding: 20,
+        width:win.width,
+        height:win.height,
         borderRadius: 100,
-        backgroundColor:'#B0E0E6',
-        flexDirection:"row",
-        justifyContent:"space-between"
+        alignItems:"center",
+        justifyContent:"center",
+        paddingBottom:20,
     },
-    first_box:{
-        width:win.width*0.85,
-        height:win.height*0.13,
-        margin: 30,
-        marginTop: 0,
-        padding: 20,
-        borderRadius: 100,
-        backgroundColor:'#B0E0E6',
-        flexDirection:"row",
-        justifyContent:"space-between"
+    card:{
+        width:win.width*0.65,
+        height:win.height* 0.5,
+        borderRadius:50,
+        backgroundColor:"#add8e6"
     },
     image_view: {
-        width:"40%",
-        height:"100%",
-        justifyContent:"center"
+        width:"100%",
+        height:"60%"
     },
     text_view: {
         width:"60%",
         height:"100%",
         justifyContent:"center"
-    },
-    card:{
-        width:win.width*0.5,
-        height:win.height* 0.6,
-        borderRadius:10,
-        borderWidth:3,
-        borderColor:"red",
-        margin: win.width*0.25,
-        marginTop: 40,
-        padding:10
     }
 })
 
