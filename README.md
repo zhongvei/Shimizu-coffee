@@ -36,3 +36,10 @@ To make the machine more efficient, we have construct a databse for to record th
 ## Mobile Interface 
 
 ![GitHub Logo](/image/phoneapp.jpg)
+
+## Machiine Design 
+![GitHub Logo](/image/machine1.png)
+
+![GitHub Logo](/image/machine2.png)
+
+![GitHub Logo](/image/machine3.png)
