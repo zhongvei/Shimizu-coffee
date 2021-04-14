@@ -26,7 +26,7 @@ Not only this can shortened the waiting time, but also creating less workload fo
 
 ## Design 
 
-As the growing population of hand-drip coffee, cold-brew and batch brew coffee, we decided to use these method as our brewing method in the machine. 
+As the growing population of ***hand-drip coffee, cold-brew and batch brew coffee***, we decided to use these method as our brewing method in the machine. 
 
 We have also create a mobile interface to allow user to interact with the machine and also provide a potential add-on to exisiting delivery apps for restaurants 
 
