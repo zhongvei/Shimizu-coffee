@@ -1,101 +1,122 @@
 import React from 'react';
-import {StyleSheet,View,Text, Button, Image, Dimensions} from 'react-native';
+import {StyleSheet,View,Text, ImageBackground ,Image, Dimensions, Button,ScrollView} from 'react-native';
 import { TouchableHighlight } from 'react-native-gesture-handler';
 
 const win = Dimensions.get('window');
 
+const data = ["Hand Drip","Batch Brew","Cold Drip"]
+
 const HomeScreen = ({navigation}) => {
     return(
-        <View style={styles.background}>
+
+        <ImageBackground
+            source={require('../../assets/images/homepage.png')}
+            style={styles.background}>
+                
             <View style={styles.container}>
-
-                <TouchableHighlight 
-                style={styles.first_box}
-                onPress={()=> navigation.navigate('Hand Drip')}
-                underlayColor="	rgb(210,105,30)"
+                <ScrollView horizontal={true}
+                snapToInterval={win.width}
+                showsHorizontalScrollIndicator={true}
+                centerContent={true}
+                bounces={false}
+                contentContainerStyle={{alignItems:"center"}}
                 >
-                    <>
-                        <View
-                        style={styles.image_view}>
-                            <Image
-                                style={{width:100,height:110}}
-                                source={require('../../assets/icons/HandDrip.png')}>
-                            </Image>
-                        </View>
-                        <View
-                            style={styles.text_view}
-                        >
-                            <Text
-                                style={{fontSize:30}}
+                    {data.map((method)=>{
+                        return(
+                            <TouchableHighlight style={styles.card}>
+                            <View>
+                                <Text>
+                                    {method}
+                                </Text>
+                            </View>
+                        </TouchableHighlight>
+                        )
+                    })}
+                    {/* <TouchableHighlight 
+                    style={styles.first_box}
+                    onPress={()=> navigation.navigate('Hand Drip')}
+                    underlayColor="#AFEEEE"
+                    >
+                        <>
+                            <View
+                            style={styles.image_view}>
+                                <Image
+                                    style={{width:100,height:110}}
+                                    source={require('../../assets/icons/HandDrip.png')}>
+                                </Image>
+                            </View>
+                            <View
+                                style={styles.text_view}
                             >
-                                Hand Drip
-                            </Text>
-                        </View>
- 
-                    </>
-                </TouchableHighlight>   
+                                <Text
+                                    style={{fontSize:30}}
+                                >
+                                    Hand Drip
+                                </Text>
+                            </View>
+    
+                        </>
+                    </TouchableHighlight>   
 
-                <TouchableHighlight 
-                style={styles.box}
-                onPress={()=> navigation.navigate('Batch Brew')}
-                underlayColor="	rgb(210,105,30)"
-                >
-                    <>
-                        <View
-                        style={styles.image_view}>
-                            <Image
-                                style={{width:100,height:110}}
-                                source={require('../../assets/icons/BatchBrew.jpg')}>
-                            </Image>
-                        </View>
-                        <View
-                            style={styles.text_view}
-                        >
-                            <Text
-                                style={{fontSize:30}}
+                    <TouchableHighlight 
+                    style={styles.box}
+                    onPress={()=> navigation.navigate('Batch Brew')}
+                    underlayColor="#AFEEEE"
+                    >
+                        <>
+                            <View
+                            style={styles.image_view}>
+                                <Image
+                                    style={{width:100,height:110}}
+                                    source={require('../../assets/icons/BatchBrew.jpg')}>
+                                </Image>
+                            </View>
+                            <View
+                                style={styles.text_view}
                             >
-                                Cold Brew
-                            </Text>
-                        </View>
- 
-                    </>
-                </TouchableHighlight>  
+                                <Text
+                                    style={{fontSize:30}}
+                                >
+                                    Cold Brew
+                                </Text>
+                            </View>
+    
+                        </>
+                    </TouchableHighlight>  
 
-                <TouchableHighlight 
-                style={styles.box}
-                onPress={()=> navigation.navigate('Cold Brew')}
-                underlayColor="	rgb(210,105,30)"
-                >
-                    <>
-                        <View
-                        style={styles.image_view}>
-                            <Image
-                                style={{width:100,height:120}}
-                                source={require('../../assets/icons/ColdBrew.png')}>
-                            </Image>
-                        </View>
-                        <View
-                            style={styles.text_view}
-                        >
-                            <Text
-                                style={{fontSize:30}}
+                    <TouchableHighlight 
+                    style={styles.box}
+                    onPress={()=> navigation.navigate('Cold Brew')}
+                    underlayColor="#AFEEEE"
+                    >
+                        <>
+                            <View
+                            style={styles.image_view}>
+                                <Image
+                                    style={{width:100,height:120}}
+                                    source={require('../../assets/icons/ColdBrew.png')}>
+                                </Image>
+                            </View>
+                            <View
+                                style={styles.text_view}
                             >
-                                Batch Brew
-                            </Text>
-                        </View>
- 
-                    </>
-                </TouchableHighlight>  
+                                <Text
+                                    style={{fontSize:30}}
+                                >
+                                    Batch Brew
+                                </Text>
+                            </View>
+    
+                        </>
+                    </TouchableHighlight>  */}
+                </ScrollView>
             </View>
-        </View>
-        
-
+        </ImageBackground>
     )
 };
 
 const styles = StyleSheet.create({
     background: {
-        backgroundColor:"rgb(244,164,96)",
         height:win.height,
         width:win.width
     },
@@ -104,8 +125,6 @@ const styles = StyleSheet.create({
         height: "100%",
         alignItems: 'center',
         justifyContent: "center",
-
-
     },
     box: {
         width:win.width*0.85,
@@ -113,7 +132,7 @@ const styles = StyleSheet.create({
         margin: 30,
         padding: 20,
         borderRadius: 100,
-        backgroundColor:'rgb(139,69,19)',
+        backgroundColor:'#B0E0E6',
         flexDirection:"row",
         justifyContent:"space-between"
     },
@@ -124,7 +143,7 @@ const styles = StyleSheet.create({
         marginTop: 0,
         padding: 20,
         borderRadius: 100,
-        backgroundColor:'rgb(139,69,19)',
+        backgroundColor:'#B0E0E6',
         flexDirection:"row",
         justifyContent:"space-between"
     },
@@ -137,6 +156,16 @@ const styles = StyleSheet.create({
         width:"60%",
         height:"100%",
         justifyContent:"center"
+    },
+    card:{
+        width:win.width*0.5,
+        height:win.height* 0.6,
+        borderRadius:10,
+        borderWidth:3,
+        borderColor:"red",
+        margin: win.width*0.25,
+        marginTop: 40,
+        padding:10
     }
 })
 

@@ -8,15 +8,17 @@ import Homescreen from './Components/Modals/Homescreen';
 import HandDrip from './Components/Modals/HandDrip';
 import BatchBrew from './Components/Modals/HandDrip';
 import ColdBrew from './Components/Modals/ColdBrew';
-import Navbar from  './Components/Navbar'
+import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context'
 
 const Stack = createStackNavigator();
 
 function App() {
   return (
-    <NavigationContainer>
+    <SafeAreaProvider>
+          <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={Homescreen} 
+        options={{headerShown: false}}
         // options={{ headerTitle: props => <Navbar {...props} /> }}
         />
         <Stack.Screen name="Hand Drip" component={HandDrip} />
@@ -24,6 +26,8 @@ function App() {
         <Stack.Screen name="Cold Brew" component={ColdBrew} />
       </Stack.Navigator>
     </NavigationContainer>
+    </SafeAreaProvider>
+
   );
 }
 
