@@ -16,7 +16,7 @@ const HomeScreen = ({navigation}) => {
                 
             <View style={styles.container}>
                 <ScrollView horizontal={true}
-                snapToInterval={win.width}
+                snapToInterval={win.width*0.7}
                 centerContent={true}
                 decelerationRate={0.1}
                 pagingEnabled={true}
@@ -36,7 +36,6 @@ const HomeScreen = ({navigation}) => {
                                 source={require('../../assets/images/HandDrip.jpg')}
                                 style={{height:"100%",width:"100%",borderRadius:50}}
                             >
-
                             </Image>
                         </View>
                         <View style={{padding:40}}>
@@ -112,7 +111,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     box: {
-        width:win.width,
+        width:win.width*0.8,
         height:win.height,
         borderRadius: 100,
         alignItems:"center",

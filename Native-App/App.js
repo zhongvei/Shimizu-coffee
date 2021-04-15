@@ -6,7 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Homescreen from './Components/Modals/Homescreen';
 import HandDrip from './Components/Modals/HandDrip';
-import BatchBrew from './Components/Modals/HandDrip';
+import BatchBrew from './Components/Modals/BatchBrew';
 import ColdBrew from './Components/Modals/ColdBrew';
 import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context'
 
